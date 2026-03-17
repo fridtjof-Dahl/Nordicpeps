@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finn Riktig Peptid — NordicPeps Quiz</title>
+    <meta name="description" content="Ta vår gratis quiz og finn ut hvilke peptider som passer best for dine mål. Personlig anbefaling på 60 sekunder.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="quiz.css">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><text y='28' font-size='28'>⬡</text></svg>">
+</head>
+<body class="quiz-page">
+
+    <!-- Nav -->
+    <nav class="quiz-nav">
+        <div class="quiz-nav-inner">
+            <a href="index.html" class="nav-logo" style="color: var(--color-text)">
+                <svg class="nav-logo-icon" viewBox="0 0 40 40" fill="none">
+                    <path d="M20 4L35 12.5V27.5L20 36L5 27.5V12.5L20 4Z" stroke="currentColor" stroke-width="1.5"/>
+                    <path d="M20 10L29 15.5V24.5L20 30L11 24.5V15.5L20 10Z" stroke="currentColor" stroke-width="0.8" opacity="0.4"/>
+                </svg>
+                <span>NordicPeps</span>
+            </a>
+            <div class="quiz-nav-links">
+                <a href="index.html">Hjem</a>
+                <a href="index.html#produkter">Produkter</a>
+                <a href="labtester.html">Labtester</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Quiz Container -->
+    <main class="quiz-main">
+        <!-- Intro Screen -->
+        <div class="quiz-screen quiz-intro active" id="quizIntro">
+            <div class="quiz-intro-content">
+                <div class="quiz-intro-icon">
+                    <svg viewBox="0 0 48 48" fill="none">
+                        <rect x="8" y="4" width="32" height="40" rx="4" stroke="currentColor" stroke-width="2"/>
+                        <path d="M16 16h16M16 22h16M16 28h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                        <circle cx="34" cy="34" r="8" fill="var(--color-accent)" stroke="var(--color-accent)" stroke-width="2"/>
+                        <path d="M32 34l2 2 4-4" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                <h1>Finn din peptid<br><em>på 60 sekunder</em></h1>
+                <p>Svar på 4 enkle spørsmål, og vi anbefaler de peptidene som passer best for dine mål — basert på forskning og laboratoriedata.</p>
+                <div class="quiz-intro-features">
+                    <div class="quiz-intro-feat">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                        <span>Tar kun 60 sekunder</span>
+                    </div>
+                    <div class="quiz-intro-feat">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg>
+                        <span>Personlig anbefaling</span>
+                    </div>
+                    <div class="quiz-intro-feat">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                        <span>Forskningsbasert</span>
+                    </div>
+                </div>
+                <button class="btn btn-primary btn-lg quiz-start-btn" id="quizStartBtn">
+                    <span>Start Quiz</span>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </button>
+                <p class="quiz-intro-note">Gratis. Ingen registrering. Ingen forpliktelser.</p>
+            </div>
+        </div>
+
+        <!-- Quiz Steps -->
+        <div class="quiz-screen quiz-steps" id="quizSteps">
+            <!-- Progress -->
+            <div class="quiz-progress">
+                <div class="quiz-progress-info">
+                    <span class="quiz-progress-step" id="progressLabel">Spørsmål 1 av 4</span>
+                    <span class="quiz-progress-pct" id="progressPct">25%</span>
+                </div>
+                <div class="quiz-progress-bar">
+                    <div class="quiz-progress-fill" id="progressFill" style="width: 25%"></div>
+                </div>
+            </div>
+
+            <!-- Step 1: Goal -->
+            <div class="quiz-step active" data-step="1">
+                <h2>Hva ønsker du å forbedre?</h2>
+                <p class="quiz-step-desc">Velg ditt primære forskningsfokus.</p>
+                <div class="quiz-options" data-name="goal">
+                    <label class="quiz-option">
+                        <input type="radio" name="goal" value="recovery">
+                        <div class="quiz-option-inner">
+                            <div class="quiz-option-icon">
+                                <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 6C16 6 6 12 6 20a10 10 0 0020 0c0-8-10-14-10-14z"/><path d="M16 14v6M13 17h6"/></svg>
+                            </div>
+                            <div class="quiz-option-text">
+                                <strong>Recovery &amp; Skadehelbredelse</strong>
+                                <span>Muskler, sener, ledd</span>
+                            </div>
+                            <div class="quiz-option-check">
+                                <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5"/></svg>
+                            </div>
+                        </div>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="goal" value="fatLoss">
+                        <div class="quiz-option-inner">
+                            <div class="quiz-option-icon">
+                                <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 4a4 4 0 100 8 4 4 0 000-8zM8 28V18a8 8 0 0116 0v10"/><path d="M12 22l4-4 4 4"/></svg>
+                            </div>
+                            <div class="quiz-option-text">
+                                <strong>Fettforbrenning &amp; Metabolisme</strong>
+                                <span>Vektkontroll, appetitt</span>
+                            </div>
+                            <div class="quiz-option-check">
+                                <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5"/></svg>
+                            </div>
+                        </div>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="goal" value="muscle">
+                        <div class="quiz-option-inner">
+                            <div class="quiz-option-icon">
+                                <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 16h4l2-4 4 8 4-8 2 4h4"/><rect x="4" y="12" width="24" height="8" rx="2"/></svg>
+                            </div>
+                            <div class="quiz-option-text">
+                                <strong>Muskelbygging &amp; Ytelse</strong>
+                                <span>Styrke, restitusjon, vekst</span>
+                            </div>
+                            <div class="quiz-option-check">
+                                <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5"/></svg>
+                            </div>
+                        </div>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="goal" value="sleep">
+                        <div class="quiz-option-inner">
+                            <div class="quiz-option-icon">
+                                <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M26 16A10 10 0 1116 6a8 8 0 0010 10z"/></svg>
+                            </div>
+                            <div class="quiz-option-text">
+                                <strong>Søvn &amp; Restitusjon</strong>
+                                <span>Søvnkvalitet, hvile, hormonbalanse</span>
+                            </div>
+                            <div class="quiz-option-check">
+                                <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5"/></svg>
+                            </div>
+                        </div>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="goal" value="skin">
+                        <div class="quiz-option-inner">
+                            <div class="quiz-option-icon">
+                                <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 4l2 6h6l-5 4 2 6-5-4-5 4 2-6-5-4h6l2-6z"/></svg>
+                            </div>
+                            <div class="quiz-option-text">
+                                <strong>Hud &amp; Anti-Aging</strong>
+                                <span>Kollagen, hudfornyelse, aldring</span>
+                            </div>
+                            <div class="quiz-option-check">
+                                <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5"/></svg>
+                            </div>
+                        </div>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Step 2: Activity Level -->
+            <div class="quiz-step" data-step="2">
+                <h2>Hvor aktiv er du?</h2>
+                <p class="quiz-step-desc">Dette hjelper oss å tilpasse anbefalingene til din livsstil.</p>
+                <div class="quiz-options" data-name="activity">
+                    <label class="quiz-option">
+                        <input type="radio" name="activity" value="sedentary">
+                        <div class="quiz-option-inner">
+                            <div class="quiz-option-icon">
+                                <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="6" y="14" width="20" height="12" rx="2"/><path d="M12 14V10a4 4 0 018 0v4"/></svg>
+                            </div>
+                            <div class="quiz-option-text">
+                                <strong>Stillesittende</strong>
+                                <span>Lite til moderat daglig aktivitet</span>
+                            </div>
+                            <div class="quiz-option-check">
+                                <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5"/></svg>
+                            </div>
+                        </div>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="activity" value="moderate">
+                        <div class="quiz-option-inner">
+                            <div class="quiz-option-icon">
+                                <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 4a4 4 0 100 8 4 4 0 000-8z"/><path d="M10 28l3-10 3 3 3-3 3 10"/></svg>
+                            </div>
+                            <div class="quiz-option-text">
+                                <strong>Moderat Trening</strong>
+                                <span>Trener 2-4 ganger i uken</span>
+                            </div>
+                            <div class="quiz-option-check">
+                                <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5"/></svg>
+                            </div>
+                        </div>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="activity" value="intense">
+                        <div class="quiz-option-inner">
+                            <div class="quiz-option-icon">
+                                <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 4l4 8h-8l4-8z"/><path d="M8 16h16l-4 12H12L8 16z"/></svg>
+                            </div>
+                            <div class="quiz-option-text">
+                                <strong>Intens Trening</strong>
+                                <span>Daglig trening eller toppidrett</span>
+                            </div>
+                            <div class="quiz-option-check">
+                                <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5"/></svg>
+                            </div>
+                        </div>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Step 3: Age Range -->
+            <div class="quiz-step" data-step="3">
+                <h2>Din aldersgruppe</h2>
+                <p class="quiz-step-desc">Forskjellige peptider kan være mer relevante for ulike aldersgrupper.</p>
+                <div class="quiz-options" data-name="age">
+                    <label class="quiz-option">
+                        <input type="radio" name="age" value="18-30">
+                        <div class="quiz-option-inner">
+                            <div class="quiz-option-icon">
+                                <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="16" cy="10" r="6"/><path d="M6 28c0-6 4-10 10-10s10 4 10 10"/></svg>
+                            </div>
+                            <div class="quiz-option-text">
+                                <strong>18 – 30</strong>
+                            </div>
+                            <div class="quiz-option-check">
+                                <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5"/></svg>
+                            </div>
+                        </div>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="age" value="30-45">
+                        <div class="quiz-option-inner">
+                            <div class="quiz-option-icon">
+                                <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="16" cy="10" r="6"/><path d="M6 28c0-6 4-10 10-10s10 4 10 10"/><path d="M20 8l2-2"/></svg>
+                            </div>
+                            <div class="quiz-option-text">
+                                <strong>30 – 45</strong>
+                            </div>
+                            <div class="quiz-option-check">
+                                <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5"/></svg>
+                            </div>
+                        </div>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="age" value="45+">
+                        <div class="quiz-option-inner">
+                            <div class="quiz-option-icon">
+                                <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="16" cy="10" r="6"/><path d="M6 28c0-6 4-10 10-10s10 4 10 10"/><path d="M12 8h8"/></svg>
+                            </div>
+                            <div class="quiz-option-text">
+                                <strong>45+</strong>
+                            </div>
+                            <div class="quiz-option-check">
+                                <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5"/></svg>
+                            </div>
+                        </div>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Step 4: Timeframe -->
+            <div class="quiz-step" data-step="4">
+                <h2>Din tidshorisont</h2>
+                <p class="quiz-step-desc">Hvor lenge planlegger du å følge et forskningsprotokoll?</p>
+                <div class="quiz-options" data-name="timeframe">
+                    <label class="quiz-option">
+                        <input type="radio" name="timeframe" value="short">
+                        <div class="quiz-option-inner">
+                            <div class="quiz-option-icon">
+                                <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="16" cy="16" r="12"/><path d="M16 10v6l4 2"/></svg>
+                            </div>
+                            <div class="quiz-option-text">
+                                <strong>Kortsiktig (4–8 uker)</strong>
+                                <span>Rask effekt og evaluering</span>
+                            </div>
+                            <div class="quiz-option-check">
+                                <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5"/></svg>
+                            </div>
+                        </div>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="timeframe" value="medium">
+                        <div class="quiz-option-inner">
+                            <div class="quiz-option-icon">
+                                <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="4" y="6" width="24" height="20" rx="2"/><path d="M4 12h24"/><path d="M10 4v4M22 4v4"/></svg>
+                            </div>
+                            <div class="quiz-option-text">
+                                <strong>Medium (2–4 måneder)</strong>
+                                <span>Grundig protokoll med oppfølging</span>
+                            </div>
+                            <div class="quiz-option-check">
+                                <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5"/></svg>
+                            </div>
+                        </div>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="timeframe" value="long">
+                        <div class="quiz-option-inner">
+                            <div class="quiz-option-icon">
+                                <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 26V6l6 4 4-4 4 4 6-4v20l-6-4-4 4-4-4-6 4z"/></svg>
+                            </div>
+                            <div class="quiz-option-text">
+                                <strong>Langsiktig Optimalisering</strong>
+                                <span>Vedvarende støtte over tid</span>
+                            </div>
+                            <div class="quiz-option-check">
+                                <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5"/></svg>
+                            </div>
+                        </div>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Navigation -->
+            <div class="quiz-nav-buttons">
+                <button class="quiz-back-btn" id="quizBackBtn">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+                    <span>Tilbake</span>
+                </button>
+                <button class="btn btn-primary quiz-next-btn" id="quizNextBtn">
+                    <span>Neste</span>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Loading Screen -->
+        <div class="quiz-screen quiz-loading" id="quizLoading">
+            <div class="quiz-loading-content">
+                <div class="quiz-loading-spinner">
+                    <svg viewBox="0 0 60 60" fill="none">
+                        <circle cx="30" cy="30" r="26" stroke="var(--color-border)" stroke-width="2"/>
+                        <path d="M30 4a26 26 0 0126 26" stroke="var(--color-accent)" stroke-width="2.5" stroke-linecap="round"/>
+                    </svg>
+                </div>
+                <h3>Analyserer dine svar...</h3>
+                <p>Vi matcher dine mål med de best dokumenterte peptidene.</p>
+                <div class="quiz-loading-steps">
+                    <div class="loading-step" id="ls1">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/></svg>
+                        <span>Analyserer forskningsmål...</span>
+                    </div>
+                    <div class="loading-step" id="ls2">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/></svg>
+                        <span>Matcher med peptiddatabase...</span>
+                    </div>
+                    <div class="loading-step" id="ls3">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/></svg>
+                        <span>Genererer personlig anbefaling...</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Results Screen -->
+        <div class="quiz-screen quiz-results" id="quizResults">
+            <div class="quiz-results-content">
+                <div class="quiz-results-header">
+                    <div class="quiz-results-icon">
+                        <svg viewBox="0 0 48 48" fill="none">
+                            <rect x="8" y="4" width="32" height="40" rx="4" stroke="currentColor" stroke-width="2"/>
+                            <path d="M18 20l4 4 8-8" stroke="var(--color-accent)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <h2>Din Anbefaling</h2>
+                    <p>Basert på dine svar har vi funnet de peptidene som best matcher dine forskningsmål.</p>
+                </div>
+
+                <!-- Primary Recommendation -->
+                <div class="quiz-rec-card quiz-rec-primary" id="recPrimary">
+                    <div class="quiz-rec-header">
+                        <div class="quiz-rec-badge">Anbefalt for deg</div>
+                        <div class="quiz-rec-title-row">
+                            <div class="quiz-rec-icon-wrap">
+                                <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 6C16 6 6 12 6 20a10 10 0 0020 0c0-8-10-14-10-14z"/></svg>
+                            </div>
+                            <div>
+                                <h3 class="quiz-rec-name" id="recName">BPC-157</h3>
+                                <p class="quiz-rec-subtitle" id="recSubtitle">Kroppens naturlige reparasjonspeptid for muskel-, sene- og leddheling.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="quiz-rec-details">
+                        <div class="quiz-rec-detail">
+                            <span class="quiz-rec-detail-label">Bruksområder</span>
+                            <p class="quiz-rec-detail-value" id="recUseCases">Recovery og skadehelbredelse.</p>
+                        </div>
+                        <div class="quiz-rec-detail">
+                            <span class="quiz-rec-detail-label">Forskningsdosering</span>
+                            <p class="quiz-rec-detail-value" id="recDosage">250-500 mcg daglig, subkutant.</p>
+                        </div>
+                        <div class="quiz-rec-detail">
+                            <span class="quiz-rec-detail-label">Syklus</span>
+                            <p class="quiz-rec-detail-value" id="recCycle">4–8 uker</p>
+                        </div>
+                    </div>
+
+                    <div class="quiz-rec-summary">
+                        <span class="quiz-rec-summary-label">Forskningssammendrag</span>
+                        <p id="recSummary">BPC-157 har vist svært lovende resultater i studier på vevsreparasjon, med signifikant forbedring i helbredelse av muskler, sener og ledd.</p>
+                    </div>
+
+                    <div class="quiz-rec-actions">
+                        <a href="index.html#produkter" class="btn btn-primary">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+                            <span>Se Produktdetaljer</span>
+                        </a>
+                        <a href="labtester.html" class="btn btn-ghost-dark">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                            <span>Se Labtest</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Secondary Recommendation -->
+                <div class="quiz-rec-card quiz-rec-secondary" id="recSecondary">
+                    <div class="quiz-rec-header">
+                        <div class="quiz-rec-badge badge-alt">Også anbefalt</div>
+                        <div class="quiz-rec-title-row">
+                            <div class="quiz-rec-icon-wrap icon-alt">
+                                <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="16" cy="16" r="12"/><path d="M16 10v12M10 16h12"/></svg>
+                            </div>
+                            <div>
+                                <h3 class="quiz-rec-name" id="recName2">TB-500</h3>
+                                <p class="quiz-rec-subtitle" id="recSubtitle2">Thymosin Beta-4 for cellemigrasjon og vevsgjenoppbygging.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="quiz-rec-details">
+                        <div class="quiz-rec-detail">
+                            <span class="quiz-rec-detail-label">Bruksområder</span>
+                            <p class="quiz-rec-detail-value" id="recUseCases2">Vevsgjenoppbygging og cellefornyelse.</p>
+                        </div>
+                        <div class="quiz-rec-detail">
+                            <span class="quiz-rec-detail-label">Syklus</span>
+                            <p class="quiz-rec-detail-value" id="recCycle2">6–12 uker</p>
+                        </div>
+                    </div>
+                    <div class="quiz-rec-actions">
+                        <a href="index.html#produkter" class="btn btn-product">
+                            <span>Les Mer</span>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Disclaimer -->
+                <div class="quiz-disclaimer">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+                    <p><strong>Disclaimer:</strong> Kun til forsknings- og utdanningsformål. Disse anbefalingene er ikke medisinsk rådgivning. Peptider er ikke beregnet for menneskelig konsum. Konsulter alltid en kvalifisert helsepersonell.</p>
+                </div>
+
+                <!-- Retake -->
+                <button class="quiz-retake-btn" id="quizRetakeBtn">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 4v6h6"/><path d="M3.51 15a9 9 0 102.13-9.36L1 10"/></svg>
+                    <span>Ta Quizen På Nytt</span>
+                </button>
+            </div>
+        </div>
+    </main>
+
+    <script src="quiz.js"></script>
+</body>
+</html>

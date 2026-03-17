@@ -618,6 +618,65 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
     line-height: 1.5;
 }
 
+/* ===== Quiz CTA Section ===== */
+.quiz-cta-section {
+    padding: 0;
+    margin-top: -1px;
+}
+
+.quiz-cta-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 32px;
+    padding: 36px 44px;
+    background: linear-gradient(135deg, #F0F4F8, #E8F0F7, #F5F0E6);
+    border: 1px solid var(--color-border-light);
+    border-radius: var(--radius-xl);
+    margin: 40px 0;
+}
+
+.quiz-cta-left {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.quiz-cta-icon {
+    width: 56px;
+    height: 56px;
+    flex-shrink: 0;
+    color: var(--color-primary);
+}
+
+.quiz-cta-icon svg { width: 100%; height: 100%; }
+
+.quiz-cta-left h2 {
+    font-family: var(--font-display);
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 4px;
+    color: var(--color-text);
+}
+
+.quiz-cta-left p {
+    font-size: 0.92rem;
+    color: var(--color-text-secondary);
+    line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+    .quiz-cta-card {
+        flex-direction: column;
+        text-align: center;
+        padding: 32px 24px;
+    }
+    .quiz-cta-left {
+        flex-direction: column;
+    }
+    .quiz-cta-card .btn { width: 100%; justify-content: center; }
+}
+
 /* ===== About Section ===== */
 .about-section {
     padding: var(--section-padding) 0;
