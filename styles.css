@@ -4,31 +4,31 @@
    ======================================== */
 
 :root {
-    /* Colors — Deep Nordic palette */
-    --color-bg: #FAFAF8;
-    --color-bg-warm: #F5F3EE;
-    --color-bg-dark: #0A0F1C;
+    /* Colors — Nordic Clarity palette */
+    --color-bg: #FAFBFC;
+    --color-bg-warm: #F3F5F7;
+    --color-bg-dark: #0B1221;
     --color-bg-card: #FFFFFF;
     
-    --color-text: #1A1A2E;
-    --color-text-secondary: #6B7280;
-    --color-text-muted: #9CA3AF;
+    --color-text: #111928;
+    --color-text-secondary: #5B6578;
+    --color-text-muted: #8E96A3;
     --color-text-inverse: #FFFFFF;
     
     --color-primary: #1B4D6E;
     --color-primary-light: #2B6F9E;
     --color-primary-dark: #0F3451;
-    --color-primary-subtle: #E8F0F7;
+    --color-primary-subtle: #EBF3F9;
     
-    --color-accent: #C9A85C;
-    --color-accent-light: #E0C97A;
-    --color-accent-dark: #A88A3E;
+    --color-accent: #3B8EA5;
+    --color-accent-light: #4DA8C0;
+    --color-accent-dark: #2D7088;
     
     --color-success: #10B981;
     --color-success-bg: #ECFDF5;
     
-    --color-border: #E5E7EB;
-    --color-border-light: #F3F4F6;
+    --color-border: #E2E6EB;
+    --color-border-light: #F0F2F5;
     
     /* Typography */
     --font-display: 'Playfair Display', Georgia, serif;
@@ -111,7 +111,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .preloader-logo {
     width: 60px;
     height: 60px;
-    color: var(--color-accent);
+    color: rgba(255, 255, 255, 0.7);
     animation: preloaderPulse 1.5s ease-in-out infinite;
 }
 
@@ -211,16 +211,22 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
     font-size: 0.85rem;
     font-weight: 600;
     padding: 10px 24px;
-    background: var(--color-accent);
-    color: var(--color-bg-dark);
+    background: #FFFFFF;
+    color: var(--color-primary);
     border-radius: 100px;
     transition: all 0.3s var(--ease-out);
+    border: 1px solid rgba(255,255,255,0.9);
+}
+
+.nav.scrolled .nav-cta {
+    background: var(--color-primary);
+    color: #FFFFFF;
+    border-color: var(--color-primary);
 }
 
 .nav-cta:hover {
-    background: var(--color-accent-light);
     transform: translateY(-1px);
-    box-shadow: 0 4px 16px rgba(201, 168, 92, 0.3);
+    box-shadow: 0 4px 16px rgba(27, 77, 110, 0.2);
 }
 
 .nav-menu-btn {
@@ -282,8 +288,8 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .mobile-menu-cta {
     margin-top: 20px;
     padding: 14px 36px;
-    background: var(--color-accent);
-    color: var(--color-bg-dark);
+    background: #FFFFFF;
+    color: var(--color-primary);
     font-weight: 600;
     border-radius: 100px;
     font-size: 1rem;
@@ -310,9 +316,9 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
     position: absolute;
     inset: 0;
     background: 
-        radial-gradient(ellipse 80% 60% at 20% 50%, rgba(27, 77, 110, 0.15) 0%, transparent 70%),
-        radial-gradient(ellipse 60% 80% at 80% 30%, rgba(201, 168, 92, 0.08) 0%, transparent 60%),
-        linear-gradient(180deg, #0A0F1C 0%, #111827 40%, #1A2332 70%, #0F1926 100%);
+        radial-gradient(ellipse 80% 60% at 20% 50%, rgba(59, 142, 165, 0.08) 0%, transparent 70%),
+        radial-gradient(ellipse 60% 80% at 80% 30%, rgba(43, 111, 158, 0.06) 0%, transparent 60%),
+        linear-gradient(180deg, #0B1221 0%, #0F1B2D 40%, #132338 70%, #0D1827 100%);
 }
 
 .hero-particles {
@@ -334,10 +340,10 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
     align-items: center;
     gap: 8px;
     padding: 8px 20px;
-    background: rgba(255, 255, 255, 0.08);
-    border: 1px solid rgba(255, 255, 255, 0.12);
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.15);
     border-radius: 100px;
-    color: var(--color-accent);
+    color: rgba(255, 255, 255, 0.85);
     font-size: 0.82rem;
     font-weight: 500;
     letter-spacing: 0.04em;
@@ -361,8 +367,9 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .hero-title-accent {
     font-size: clamp(3.2rem, 7vw, 5.8rem);
     font-weight: 600;
-    color: var(--color-accent);
+    color: #FFFFFF;
     font-style: italic;
+    text-shadow: 0 0 60px rgba(59, 142, 165, 0.3);
 }
 
 .hero-subtitle {
@@ -404,7 +411,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .hero-trust-unit {
     font-family: var(--font-display);
     font-size: 1.4rem;
-    color: var(--color-accent);
+    color: var(--color-accent-light);
     font-weight: 500;
 }
 
@@ -421,6 +428,16 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
     width: 1px;
     height: 40px;
     background: rgba(255, 255, 255, 0.15);
+}
+
+.hero .btn-primary {
+    background: #FFFFFF;
+    color: var(--color-primary);
+}
+
+.hero .btn-primary:hover {
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 8px 30px rgba(255, 255, 255, 0.2);
 }
 
 .hero-scroll-indicator {
@@ -467,14 +484,14 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 }
 
 .btn-primary {
-    background: var(--color-accent);
-    color: var(--color-bg-dark);
+    background: var(--color-primary);
+    color: #FFFFFF;
 }
 
 .btn-primary:hover {
-    background: var(--color-accent-light);
+    background: var(--color-primary-light);
     transform: translateY(-2px);
-    box-shadow: 0 8px 30px rgba(201, 168, 92, 0.3);
+    box-shadow: 0 8px 30px rgba(27, 77, 110, 0.3);
 }
 
 .btn-secondary {
@@ -485,7 +502,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .btn-secondary:hover {
     background: var(--color-primary-light);
     transform: translateY(-2px);
-    box-shadow: 0 8px 30px rgba(27, 77, 110, 0.3);
+    box-shadow: 0 8px 24px rgba(27, 77, 110, 0.25);
 }
 
 .btn-ghost {
@@ -630,7 +647,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
     justify-content: space-between;
     gap: 32px;
     padding: 36px 44px;
-    background: linear-gradient(135deg, #F0F4F8, #E8F0F7, #F5F0E6);
+    background: linear-gradient(135deg, #EBF3F9, #F0F5F8, #F3F5F7);
     border: 1px solid var(--color-border-light);
     border-radius: var(--radius-xl);
     margin: 40px 0;
@@ -849,8 +866,8 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
     top: 16px;
     left: 16px;
     padding: 5px 14px;
-    background: var(--color-accent);
-    color: var(--color-bg-dark);
+    background: var(--color-primary);
+    color: #FFFFFF;
     font-size: 0.72rem;
     font-weight: 700;
     text-transform: uppercase;
@@ -1146,8 +1163,8 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .science-tag {
     display: inline-block;
     padding: 4px 12px;
-    background: rgba(201, 168, 92, 0.15);
-    color: var(--color-accent);
+    background: rgba(59, 142, 165, 0.15);
+    color: var(--color-accent-light);
     font-size: 0.72rem;
     font-weight: 600;
     border-radius: 100px;
@@ -1366,7 +1383,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
     position: absolute;
     inset: 0;
     background-image: 
-        radial-gradient(circle at 20% 50%, rgba(201, 168, 92, 0.15) 0%, transparent 50%),
+        radial-gradient(circle at 20% 50%, rgba(59, 142, 165, 0.12) 0%, transparent 50%),
         radial-gradient(circle at 80% 50%, rgba(255, 255, 255, 0.05) 0%, transparent 50%);
 }
 
@@ -1789,14 +1806,14 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
     border-radius: 100px;
     font-weight: 600;
     font-size: 0.88rem;
-    box-shadow: 0 8px 30px rgba(27, 77, 110, 0.4);
+    box-shadow: 0 8px 30px rgba(27, 77, 110, 0.35);
     transition: all 0.3s var(--ease-out);
 }
 
 .floating-cta-btn:hover {
     background: var(--color-primary-light);
     transform: translateY(-2px);
-    box-shadow: 0 12px 40px rgba(27, 77, 110, 0.5);
+    box-shadow: 0 12px 40px rgba(27, 77, 110, 0.45);
 }
 
 /* ===== Animations ===== */
@@ -1840,7 +1857,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
     position: absolute;
     width: 3px;
     height: 3px;
-    background: rgba(201, 168, 92, 0.4);
+    background: rgba(59, 142, 165, 0.3);
     border-radius: 50%;
     pointer-events: none;
     animation: float linear infinite;

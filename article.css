@@ -225,12 +225,12 @@
 }
 
 .sidebar-cta .btn {
-    background: var(--color-accent);
-    color: var(--color-bg-dark);
+    background: #FFFFFF;
+    color: var(--color-primary);
 }
 
 .sidebar-cta .btn:hover {
-    background: var(--color-accent-light);
+    background: rgba(255, 255, 255, 0.9);
 }
 
 .sidebar-share {
@@ -494,12 +494,12 @@
 }
 
 .article-cta-inline .btn {
-    background: var(--color-accent);
-    color: var(--color-bg-dark);
+    background: #FFFFFF;
+    color: var(--color-primary);
 }
 
 .article-cta-inline .btn:hover {
-    background: var(--color-accent-light);
+    background: rgba(255, 255, 255, 0.9);
 }
 
 /* Related Articles */
