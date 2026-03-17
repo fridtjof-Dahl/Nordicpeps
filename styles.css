@@ -4,31 +4,31 @@
    ======================================== */
 
 :root {
-    /* Colors — Vinmonopolet-inspired burgundy palette */
-    --color-bg: #FAF9F7;
-    --color-bg-warm: #F3F0EB;
-    --color-bg-dark: #1A0E10;
+    /* Colors — Deep Nordic palette */
+    --color-bg: #FAFAF8;
+    --color-bg-warm: #F5F3EE;
+    --color-bg-dark: #0A0F1C;
     --color-bg-card: #FFFFFF;
     
-    --color-text: #1C1517;
-    --color-text-secondary: #5E5458;
-    --color-text-muted: #958D90;
+    --color-text: #1A1A2E;
+    --color-text-secondary: #6B7280;
+    --color-text-muted: #9CA3AF;
     --color-text-inverse: #FFFFFF;
     
-    --color-primary: #722F37;
-    --color-primary-light: #8B3A44;
-    --color-primary-dark: #531E25;
-    --color-primary-subtle: #F5ECED;
+    --color-primary: #1B4D6E;
+    --color-primary-light: #2B6F9E;
+    --color-primary-dark: #0F3451;
+    --color-primary-subtle: #E8F0F7;
     
-    --color-accent: #C4956A;
-    --color-accent-light: #D4AC85;
-    --color-accent-dark: #A67B52;
+    --color-accent: #C9A85C;
+    --color-accent-light: #E0C97A;
+    --color-accent-dark: #A88A3E;
     
-    --color-success: #2D7A4F;
-    --color-success-bg: #EDF6F1;
+    --color-success: #10B981;
+    --color-success-bg: #ECFDF5;
     
-    --color-border: #E3DEDB;
-    --color-border-light: #F0EDEA;
+    --color-border: #E5E7EB;
+    --color-border-light: #F3F4F6;
     
     /* Typography */
     --font-display: 'Playfair Display', Georgia, serif;
@@ -220,7 +220,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .nav-cta:hover {
     background: var(--color-accent-light);
     transform: translateY(-1px);
-    box-shadow: 0 4px 16px rgba(196, 149, 106, 0.35);
+    box-shadow: 0 4px 16px rgba(201, 168, 92, 0.3);
 }
 
 .nav-menu-btn {
@@ -310,9 +310,9 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
     position: absolute;
     inset: 0;
     background: 
-        radial-gradient(ellipse 80% 60% at 20% 50%, rgba(114, 47, 55, 0.2) 0%, transparent 70%),
-        radial-gradient(ellipse 60% 80% at 80% 30%, rgba(196, 149, 106, 0.1) 0%, transparent 60%),
-        linear-gradient(180deg, #1A0E10 0%, #2A1518 40%, #321A1E 70%, #1F1214 100%);
+        radial-gradient(ellipse 80% 60% at 20% 50%, rgba(27, 77, 110, 0.15) 0%, transparent 70%),
+        radial-gradient(ellipse 60% 80% at 80% 30%, rgba(201, 168, 92, 0.08) 0%, transparent 60%),
+        linear-gradient(180deg, #0A0F1C 0%, #111827 40%, #1A2332 70%, #0F1926 100%);
 }
 
 .hero-particles {
@@ -474,7 +474,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .btn-primary:hover {
     background: var(--color-accent-light);
     transform: translateY(-2px);
-    box-shadow: 0 8px 30px rgba(196, 149, 106, 0.35);
+    box-shadow: 0 8px 30px rgba(201, 168, 92, 0.3);
 }
 
 .btn-secondary {
@@ -485,7 +485,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .btn-secondary:hover {
     background: var(--color-primary-light);
     transform: translateY(-2px);
-    box-shadow: 0 8px 30px rgba(114, 47, 55, 0.3);
+    box-shadow: 0 8px 30px rgba(27, 77, 110, 0.3);
 }
 
 .btn-ghost {
@@ -630,7 +630,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
     justify-content: space-between;
     gap: 32px;
     padding: 36px 44px;
-    background: linear-gradient(135deg, #F5ECED, #F3EEEB, #F0EBE4);
+    background: linear-gradient(135deg, #F0F4F8, #E8F0F7, #F5F0E6);
     border: 1px solid var(--color-border-light);
     border-radius: var(--radius-xl);
     margin: 40px 0;
@@ -1146,7 +1146,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .science-tag {
     display: inline-block;
     padding: 4px 12px;
-    background: rgba(196, 149, 106, 0.15);
+    background: rgba(201, 168, 92, 0.15);
     color: var(--color-accent);
     font-size: 0.72rem;
     font-weight: 600;
@@ -1366,7 +1366,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
     position: absolute;
     inset: 0;
     background-image: 
-        radial-gradient(circle at 20% 50%, rgba(196, 149, 106, 0.15) 0%, transparent 50%),
+        radial-gradient(circle at 20% 50%, rgba(201, 168, 92, 0.15) 0%, transparent 50%),
         radial-gradient(circle at 80% 50%, rgba(255, 255, 255, 0.05) 0%, transparent 50%);
 }
 
@@ -1789,14 +1789,14 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
     border-radius: 100px;
     font-weight: 600;
     font-size: 0.88rem;
-    box-shadow: 0 8px 30px rgba(114, 47, 55, 0.4);
+    box-shadow: 0 8px 30px rgba(27, 77, 110, 0.4);
     transition: all 0.3s var(--ease-out);
 }
 
 .floating-cta-btn:hover {
     background: var(--color-primary-light);
     transform: translateY(-2px);
-    box-shadow: 0 12px 40px rgba(114, 47, 55, 0.5);
+    box-shadow: 0 12px 40px rgba(27, 77, 110, 0.5);
 }
 
 /* ===== Animations ===== */
@@ -1840,7 +1840,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
     position: absolute;
     width: 3px;
     height: 3px;
-    background: rgba(196, 149, 106, 0.4);
+    background: rgba(201, 168, 92, 0.4);
     border-radius: 50%;
     pointer-events: none;
     animation: float linear infinite;
