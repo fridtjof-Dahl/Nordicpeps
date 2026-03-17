@@ -1,0 +1,1054 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NordicPeps — Norges Mest Pålitelige Peptider</title>
+    <meta name="description" content="Laboratorietestede peptider sertifisert i Norge. Anbefalt av norske leger. Kvalitet du kan stole på.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><text y='28' font-size='28'>⬡</text></svg>">
+</head>
+<body>
+
+    <!-- Preloader -->
+    <div class="preloader" id="preloader">
+        <div class="preloader-inner">
+            <svg class="preloader-logo" viewBox="0 0 60 60" fill="none">
+                <path d="M30 5L52 17.5V42.5L30 55L8 42.5V17.5L30 5Z" stroke="currentColor" stroke-width="1.5" fill="none"/>
+                <path d="M30 15L42 22V36L30 43L18 36V22L30 15Z" stroke="currentColor" stroke-width="1" fill="none" opacity="0.5"/>
+            </svg>
+            <span class="preloader-text">NordicPeps</span>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="nav" id="nav">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">
+                <svg class="nav-logo-icon" viewBox="0 0 40 40" fill="none">
+                    <path d="M20 4L35 12.5V27.5L20 36L5 27.5V12.5L20 4Z" stroke="currentColor" stroke-width="1.5"/>
+                    <path d="M20 10L29 15.5V24.5L20 30L11 24.5V15.5L20 10Z" stroke="currentColor" stroke-width="0.8" opacity="0.4"/>
+                </svg>
+                <span>NordicPeps</span>
+            </a>
+            <div class="nav-links" id="navLinks">
+                <a href="#produkter" class="nav-link">Produkter</a>
+                <a href="#vitenskap" class="nav-link">Vitenskap</a>
+                <a href="#historier" class="nav-link">Historier</a>
+                <a href="#blogg" class="nav-link">Blogg</a>
+                <a href="#kontakt" class="nav-link">Kontakt</a>
+            </div>
+            <div class="nav-actions">
+                <a href="#produkter" class="nav-cta">Utforsk Produkter</a>
+                <button class="nav-menu-btn" id="navMenuBtn" aria-label="Meny">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-inner">
+            <a href="#produkter" class="mobile-menu-link">Produkter</a>
+            <a href="#vitenskap" class="mobile-menu-link">Vitenskap</a>
+            <a href="#historier" class="mobile-menu-link">Historier</a>
+            <a href="#blogg" class="mobile-menu-link">Blogg</a>
+            <a href="#kontakt" class="mobile-menu-link">Kontakt</a>
+            <a href="#produkter" class="mobile-menu-cta">Utforsk Produkter</a>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-bg">
+            <div class="hero-gradient"></div>
+            <div class="hero-particles" id="heroParticles"></div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-badge animate-in">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                </svg>
+                <span>Sertifisert &amp; Laboratorietestet i Norge</span>
+            </div>
+            <h1 class="hero-title animate-in">
+                <span class="hero-title-line">Peptider du kan</span>
+                <span class="hero-title-line hero-title-accent">stole på.</span>
+            </h1>
+            <p class="hero-subtitle animate-in">
+                Norges fremste leverandør av laboratorietestede peptider. Anbefalt av norske leger. 
+                Hver batch testes og verifiseres — slik at du kan fokusere på det som betyr mest: din helse.
+            </p>
+            <div class="hero-actions animate-in">
+                <a href="#produkter" class="btn btn-primary btn-lg">
+                    <span>Se Våre Produkter</span>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
+                <a href="#vitenskap" class="btn btn-ghost btn-lg">
+                    <span>Slik Verifiserer Vi</span>
+                </a>
+            </div>
+            <div class="hero-trust animate-in">
+                <div class="hero-trust-item">
+                    <span class="hero-trust-number" data-count="99.7">0</span><span class="hero-trust-unit">%</span>
+                    <span class="hero-trust-label">Renhet Garantert</span>
+                </div>
+                <div class="hero-trust-divider"></div>
+                <div class="hero-trust-item">
+                    <span class="hero-trust-number" data-count="147">0</span><span class="hero-trust-unit">+</span>
+                    <span class="hero-trust-label">Leger Anbefaler Oss</span>
+                </div>
+                <div class="hero-trust-divider"></div>
+                <div class="hero-trust-item">
+                    <span class="hero-trust-number" data-count="12500">0</span><span class="hero-trust-unit">+</span>
+                    <span class="hero-trust-label">Fornøyde Kunder</span>
+                </div>
+            </div>
+        </div>
+        <div class="hero-scroll-indicator">
+            <span>Scroll for å utforske</span>
+            <div class="hero-scroll-line"></div>
+        </div>
+    </section>
+
+    <!-- Trust Bar -->
+    <section class="trust-bar">
+        <div class="container">
+            <div class="trust-bar-inner">
+                <div class="trust-bar-item animate-on-scroll">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                        <path d="M9 12l2 2 4-4"/>
+                    </svg>
+                    <div>
+                        <strong>Laboratorietestet</strong>
+                        <span>Uavhengig tredjepartslaboratorium i Norge</span>
+                    </div>
+                </div>
+                <div class="trust-bar-item animate-on-scroll">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <rect x="2" y="3" width="20" height="14" rx="2"/>
+                        <path d="M8 21h8M12 17v4"/>
+                    </svg>
+                    <div>
+                        <strong>QR-Verifisert</strong>
+                        <span>Skann for labresultater i sanntid</span>
+                    </div>
+                </div>
+                <div class="trust-bar-item animate-on-scroll">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+                    </svg>
+                    <div>
+                        <strong>Legeanbefalt</strong>
+                        <span>Anbefalt av norske leger og spesialister</span>
+                    </div>
+                </div>
+                <div class="trust-bar-item animate-on-scroll">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/>
+                        <polyline points="3.27 6.96 12 12.01 20.73 6.96"/>
+                        <line x1="12" y1="22.08" x2="12" y2="12"/>
+                    </svg>
+                    <div>
+                        <strong>Rask Levering</strong>
+                        <span>Diskret levering til hele Norden</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About / Intro Section -->
+    <section class="about-section" id="om">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-visual animate-on-scroll">
+                    <div class="about-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1579154204601-01588f351e67?w=800&q=80" alt="Laboratorium" class="about-image" loading="lazy">
+                        <div class="about-image-overlay"></div>
+                        <div class="about-image-badge">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M9 12l2 2 4-4"/>
+                                <circle cx="12" cy="12" r="10"/>
+                            </svg>
+                            <span>ISO 17025 Sertifisert</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-content animate-on-scroll">
+                    <span class="section-label">Om NordicPeps</span>
+                    <h2 class="section-title">Gode varer.<br><em>Trygge varer.</em></h2>
+                    <p class="about-text">
+                        Vi startet NordicPeps med én enkel overbevisning: alle fortjener tilgang til peptider 
+                        av høyeste kvalitet — testet, verifisert og godkjent etter de strengeste norske standarder.
+                    </p>
+                    <p class="about-text">
+                        Hver eneste batch som forlater vårt lager har gjennomgått uavhengig laboratorietesting. 
+                        Vi jobber tett med norske leger og forskere for å sikre at du får produkter du kan stole på.
+                    </p>
+                    <div class="about-features">
+                        <div class="about-feature">
+                            <div class="about-feature-icon">01</div>
+                            <div>
+                                <strong>Norsk Kvalitetskontroll</strong>
+                                <span>Alle produkter testes ved uavhengige laboratorier i Norge</span>
+                            </div>
+                        </div>
+                        <div class="about-feature">
+                            <div class="about-feature-icon">02</div>
+                            <div>
+                                <strong>Transparent Sporbarhet</strong>
+                                <span>Skann QR-koden for å se fullstendige labresultater</span>
+                            </div>
+                        </div>
+                        <div class="about-feature">
+                            <div class="about-feature-icon">03</div>
+                            <div>
+                                <strong>Legeanbefalt</strong>
+                                <span>Samarbeider med over 147 norske leger og spesialister</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products-section" id="produkter">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-label">Våre Produkter</span>
+                <h2 class="section-title">Utforsk Vårt Sortiment</h2>
+                <p class="section-desc">Hver peptid er laboratorietestet med QR-verifisering. Skann, verifiser, og vit nøyaktig hva du får.</p>
+            </div>
+
+            <div class="product-filters animate-on-scroll">
+                <button class="filter-btn active" data-filter="all">Alle</button>
+                <button class="filter-btn" data-filter="recovery">Recovery</button>
+                <button class="filter-btn" data-filter="antiaging">Anti-Aging</button>
+                <button class="filter-btn" data-filter="performance">Performance</button>
+                <button class="filter-btn" data-filter="wellness">Wellness</button>
+            </div>
+
+            <div class="products-grid">
+                <!-- Product 1: BPC-157 -->
+                <div class="product-card animate-on-scroll" data-category="recovery">
+                    <div class="product-card-inner">
+                        <div class="product-image-wrap">
+                            <img src="https://images.unsplash.com/photo-1587854692152-cbe660dbde88?w=600&q=80" alt="BPC-157" class="product-image" loading="lazy">
+                            <div class="product-badge">Bestselger</div>
+                            <div class="product-qr">
+                                <svg class="qr-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <rect x="2" y="2" width="8" height="8" rx="1"/>
+                                    <rect x="14" y="2" width="8" height="8" rx="1"/>
+                                    <rect x="2" y="14" width="8" height="8" rx="1"/>
+                                    <rect x="14" y="14" width="4" height="4" rx="0.5"/>
+                                    <line x1="22" y1="14" x2="22" y2="22"/>
+                                    <line x1="14" y1="22" x2="22" y2="22"/>
+                                </svg>
+                                <span>Skann for Labtest</span>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-category-tag">Recovery</div>
+                            <h3 class="product-name">BPC-157</h3>
+                            <p class="product-desc">Kroppens naturlige reparasjonspeptid. Støtter helbredelse av muskler, sener og ledd.</p>
+                            <div class="product-meta">
+                                <div class="product-purity">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg>
+                                    <span>99.8% Renhet</span>
+                                </div>
+                                <div class="product-price">Fra <strong>kr 899</strong></div>
+                            </div>
+                            <a href="#" class="btn btn-product">
+                                <span>Les Mer</span>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 2: TB-500 -->
+                <div class="product-card animate-on-scroll" data-category="recovery">
+                    <div class="product-card-inner">
+                        <div class="product-image-wrap">
+                            <img src="https://images.unsplash.com/photo-1631549916768-4f4c1d5f16b3?w=600&q=80" alt="TB-500" class="product-image" loading="lazy">
+                            <div class="product-qr">
+                                <svg class="qr-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <rect x="2" y="2" width="8" height="8" rx="1"/>
+                                    <rect x="14" y="2" width="8" height="8" rx="1"/>
+                                    <rect x="2" y="14" width="8" height="8" rx="1"/>
+                                    <rect x="14" y="14" width="4" height="4" rx="0.5"/>
+                                    <line x1="22" y1="14" x2="22" y2="22"/>
+                                    <line x1="14" y1="22" x2="22" y2="22"/>
+                                </svg>
+                                <span>Skann for Labtest</span>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-category-tag">Recovery</div>
+                            <h3 class="product-name">TB-500</h3>
+                            <p class="product-desc">Thymosin Beta-4 fragment. Fremmer cellemigrasjon og vevsgjenoppbygging på cellenivå.</p>
+                            <div class="product-meta">
+                                <div class="product-purity">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg>
+                                    <span>99.7% Renhet</span>
+                                </div>
+                                <div class="product-price">Fra <strong>kr 1 199</strong></div>
+                            </div>
+                            <a href="#" class="btn btn-product">
+                                <span>Les Mer</span>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 3: GHK-Cu -->
+                <div class="product-card animate-on-scroll" data-category="antiaging">
+                    <div class="product-card-inner">
+                        <div class="product-image-wrap">
+                            <img src="https://images.unsplash.com/photo-1576671081837-49000212a370?w=600&q=80" alt="GHK-Cu" class="product-image" loading="lazy">
+                            <div class="product-badge badge-new">Ny</div>
+                            <div class="product-qr">
+                                <svg class="qr-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <rect x="2" y="2" width="8" height="8" rx="1"/>
+                                    <rect x="14" y="2" width="8" height="8" rx="1"/>
+                                    <rect x="2" y="14" width="8" height="8" rx="1"/>
+                                    <rect x="14" y="14" width="4" height="4" rx="0.5"/>
+                                    <line x1="22" y1="14" x2="22" y2="22"/>
+                                    <line x1="14" y1="22" x2="22" y2="22"/>
+                                </svg>
+                                <span>Skann for Labtest</span>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-category-tag">Anti-Aging</div>
+                            <h3 class="product-name">GHK-Cu</h3>
+                            <p class="product-desc">Kobber-peptid for hudfornyelse. Stimulerer kollagenproduksjon og reduserer fine linjer.</p>
+                            <div class="product-meta">
+                                <div class="product-purity">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg>
+                                    <span>99.9% Renhet</span>
+                                </div>
+                                <div class="product-price">Fra <strong>kr 1 499</strong></div>
+                            </div>
+                            <a href="#" class="btn btn-product">
+                                <span>Les Mer</span>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 4: CJC-1295 -->
+                <div class="product-card animate-on-scroll" data-category="performance">
+                    <div class="product-card-inner">
+                        <div class="product-image-wrap">
+                            <img src="https://images.unsplash.com/photo-1559757175-5700dde675bc?w=600&q=80" alt="CJC-1295" class="product-image" loading="lazy">
+                            <div class="product-qr">
+                                <svg class="qr-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <rect x="2" y="2" width="8" height="8" rx="1"/>
+                                    <rect x="14" y="2" width="8" height="8" rx="1"/>
+                                    <rect x="2" y="14" width="8" height="8" rx="1"/>
+                                    <rect x="14" y="14" width="4" height="4" rx="0.5"/>
+                                    <line x1="22" y1="14" x2="22" y2="22"/>
+                                    <line x1="14" y1="22" x2="22" y2="22"/>
+                                </svg>
+                                <span>Skann for Labtest</span>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-category-tag">Performance</div>
+                            <h3 class="product-name">CJC-1295</h3>
+                            <p class="product-desc">Veksthormonfrigjørende peptid. Støtter naturlig GH-produksjon for optimal restitusjon.</p>
+                            <div class="product-meta">
+                                <div class="product-purity">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg>
+                                    <span>99.6% Renhet</span>
+                                </div>
+                                <div class="product-price">Fra <strong>kr 1 299</strong></div>
+                            </div>
+                            <a href="#" class="btn btn-product">
+                                <span>Les Mer</span>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 5: Ipamorelin -->
+                <div class="product-card animate-on-scroll" data-category="performance">
+                    <div class="product-card-inner">
+                        <div class="product-image-wrap">
+                            <img src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=600&q=80" alt="Ipamorelin" class="product-image" loading="lazy">
+                            <div class="product-qr">
+                                <svg class="qr-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <rect x="2" y="2" width="8" height="8" rx="1"/>
+                                    <rect x="14" y="2" width="8" height="8" rx="1"/>
+                                    <rect x="2" y="14" width="8" height="8" rx="1"/>
+                                    <rect x="14" y="14" width="4" height="4" rx="0.5"/>
+                                    <line x1="22" y1="14" x2="22" y2="22"/>
+                                    <line x1="14" y1="22" x2="22" y2="22"/>
+                                </svg>
+                                <span>Skann for Labtest</span>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-category-tag">Performance</div>
+                            <h3 class="product-name">Ipamorelin</h3>
+                            <p class="product-desc">Selektiv GH-sekretagon uten bivirkninger. Ideell for søvn, restitusjon og kroppssammensetning.</p>
+                            <div class="product-meta">
+                                <div class="product-purity">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg>
+                                    <span>99.8% Renhet</span>
+                                </div>
+                                <div class="product-price">Fra <strong>kr 999</strong></div>
+                            </div>
+                            <a href="#" class="btn btn-product">
+                                <span>Les Mer</span>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 6: Epithalon -->
+                <div class="product-card animate-on-scroll" data-category="antiaging wellness">
+                    <div class="product-card-inner">
+                        <div class="product-image-wrap">
+                            <img src="https://images.unsplash.com/photo-1585435557343-3b092031a831?w=600&q=80" alt="Epithalon" class="product-image" loading="lazy">
+                            <div class="product-badge badge-popular">Populær</div>
+                            <div class="product-qr">
+                                <svg class="qr-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <rect x="2" y="2" width="8" height="8" rx="1"/>
+                                    <rect x="14" y="2" width="8" height="8" rx="1"/>
+                                    <rect x="2" y="14" width="8" height="8" rx="1"/>
+                                    <rect x="14" y="14" width="4" height="4" rx="0.5"/>
+                                    <line x1="22" y1="14" x2="22" y2="22"/>
+                                    <line x1="14" y1="22" x2="22" y2="22"/>
+                                </svg>
+                                <span>Skann for Labtest</span>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-category-tag">Anti-Aging / Wellness</div>
+                            <h3 class="product-name">Epithalon</h3>
+                            <p class="product-desc">Telomerase-aktivator. Støtter cellulær aldring og immunfunksjon på det dypeste nivået.</p>
+                            <div class="product-meta">
+                                <div class="product-purity">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg>
+                                    <span>99.7% Renhet</span>
+                                </div>
+                                <div class="product-price">Fra <strong>kr 1 699</strong></div>
+                            </div>
+                            <a href="#" class="btn btn-product">
+                                <span>Les Mer</span>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- QR Verification Section -->
+    <section class="qr-section">
+        <div class="container">
+            <div class="qr-showcase animate-on-scroll">
+                <div class="qr-showcase-content">
+                    <span class="section-label">Scan-to-Verify</span>
+                    <h2 class="section-title">Verifiser Kvaliteten<br><em>Selv.</em></h2>
+                    <p>Hvert eneste NordicPeps-produkt leveres med en unik QR-kode. Skann den med telefonen din for å se fullstendige labresultater — inkludert renhetsgrad, batch-nummer og testdato.</p>
+                    <div class="qr-steps">
+                        <div class="qr-step">
+                            <div class="qr-step-num">1</div>
+                            <div>
+                                <strong>Skann QR-Koden</strong>
+                                <span>Bruk kameraet på telefonen din</span>
+                            </div>
+                        </div>
+                        <div class="qr-step">
+                            <div class="qr-step-num">2</div>
+                            <div>
+                                <strong>Se Labresultater</strong>
+                                <span>Renhetsgrad, batch-info og testdato</span>
+                            </div>
+                        </div>
+                        <div class="qr-step">
+                            <div class="qr-step-num">3</div>
+                            <div>
+                                <strong>Trygg Bruk</strong>
+                                <span>Vit nøyaktig hva du bruker</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="qr-showcase-visual">
+                    <div class="qr-phone-mockup">
+                        <div class="qr-phone-screen">
+                            <div class="qr-phone-header">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg>
+                                <span>Verifisert Produkt</span>
+                            </div>
+                            <div class="qr-phone-product">BPC-157</div>
+                            <div class="qr-phone-batch">Batch #NP-2026-0847</div>
+                            <div class="qr-phone-results">
+                                <div class="qr-result-row">
+                                    <span>Renhet</span>
+                                    <strong>99.8%</strong>
+                                </div>
+                                <div class="qr-result-bar"><div class="qr-result-fill" style="width: 99.8%"></div></div>
+                                <div class="qr-result-row">
+                                    <span>Testet</span>
+                                    <strong>12. mars 2026</strong>
+                                </div>
+                                <div class="qr-result-row">
+                                    <span>Laboratorium</span>
+                                    <strong>NordicLab Oslo</strong>
+                                </div>
+                                <div class="qr-result-row">
+                                    <span>Status</span>
+                                    <strong class="qr-status-pass">Godkjent ✓</strong>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Science Section -->
+    <section class="science-section" id="vitenskap">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-label">Vitenskapen</span>
+                <h2 class="section-title">Forskning du kan stole på</h2>
+                <p class="section-desc">Vi bygger bro mellom vitenskap og tilgjengelighet. Våre peptider er støttet av publisert forskning og testet etter de strengeste standardene.</p>
+            </div>
+
+            <div class="science-grid">
+                <div class="science-card animate-on-scroll">
+                    <div class="science-card-icon">
+                        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M18 6v14l-8 14a2 2 0 001.74 3h24.52a2 2 0 001.74-3l-8-14V6"/>
+                            <path d="M16 6h16"/>
+                            <circle cx="22" cy="30" r="2" fill="currentColor" opacity="0.3"/>
+                            <circle cx="28" cy="33" r="1.5" fill="currentColor" opacity="0.3"/>
+                            <circle cx="25" cy="27" r="1" fill="currentColor" opacity="0.3"/>
+                        </svg>
+                    </div>
+                    <h3>HPLC-Analyse</h3>
+                    <p>High-Performance Liquid Chromatography sikrer nøyaktig identifikasjon og renhetsgrad for hver peptid.</p>
+                    <span class="science-tag">Renhet &gt; 99%</span>
+                </div>
+
+                <div class="science-card animate-on-scroll">
+                    <div class="science-card-icon">
+                        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M24 4L4 14v20l20 10 20-10V14L24 4z"/>
+                            <path d="M4 14l20 10 20-10"/>
+                            <path d="M24 44V24"/>
+                        </svg>
+                    </div>
+                    <h3>Mass Spectrometry</h3>
+                    <p>MS-analyse bekrefter den eksakte molekylvekten og strukturen til hvert peptid — ingen gjetning.</p>
+                    <span class="science-tag">Molekylær Verifikasjon</span>
+                </div>
+
+                <div class="science-card animate-on-scroll">
+                    <div class="science-card-icon">
+                        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <circle cx="24" cy="24" r="20"/>
+                            <path d="M24 4a20 20 0 010 40"/>
+                            <path d="M14 24h20"/>
+                            <path d="M24 14v20"/>
+                            <circle cx="24" cy="24" r="6"/>
+                        </svg>
+                    </div>
+                    <h3>Endotoksintesting</h3>
+                    <p>LAL-testing sikrer at produktene våre er frie for bakterielle endotoksiner — trygt for forskningsbruk.</p>
+                    <span class="science-tag">Sterilitet Garantert</span>
+                </div>
+
+                <div class="science-card animate-on-scroll">
+                    <div class="science-card-icon">
+                        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <rect x="8" y="6" width="32" height="36" rx="3"/>
+                            <path d="M16 14h16M16 20h16M16 26h10"/>
+                            <path d="M20 34l3 3 6-6"/>
+                        </svg>
+                    </div>
+                    <h3>CoA for Hver Batch</h3>
+                    <p>Certificate of Analysis følger med hvert produkt — tilgjengelig digitalt via QR-koden din.</p>
+                    <span class="science-tag">Full Transparens</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Customer Stories Section -->
+    <section class="stories-section" id="historier">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-label">Ekte Historier</span>
+                <h2 class="section-title">Mennesker som oss</h2>
+                <p class="section-desc">Ekte mennesker. Ekte resultater. Les hvordan peptider har hjulpet nordmenn med å ta tilbake kontrollen over helsen sin.</p>
+            </div>
+
+            <div class="stories-carousel" id="storiesCarousel">
+                <div class="stories-track">
+                    <!-- Story 1: Magdalena -->
+                    <div class="story-card">
+                        <div class="story-card-inner">
+                            <div class="story-image-section">
+                                <img src="https://images.unsplash.com/photo-1566616213894-2d4e1baee5d8?w=600&q=80" alt="Magdalena" class="story-image" loading="lazy">
+                                <div class="story-image-overlay"></div>
+                                <div class="story-quote-mark">&ldquo;</div>
+                            </div>
+                            <div class="story-content">
+                                <div class="story-profile">
+                                    <div class="story-avatar">M</div>
+                                    <div>
+                                        <strong class="story-name">Magdalena, 65</strong>
+                                        <span class="story-location">Bergen</span>
+                                    </div>
+                                </div>
+                                <blockquote class="story-quote">
+                                    Etter 8 år med knesmerter hadde jeg nesten gitt opp å gå turer i fjellet. Legen min anbefalte BPC-157, 
+                                    og etter 6 uker kunne jeg gå Fløyen uten smerter for første gang på mange år. Jeg gråt av glede.
+                                </blockquote>
+                                <div class="story-product">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg>
+                                    <span>Bruker: BPC-157</span>
+                                </div>
+                                <div class="story-result">
+                                    <span class="story-result-label">Resultat</span>
+                                    <span class="story-result-text">Smertefri etter 6 uker</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Story 2: Erik -->
+                    <div class="story-card">
+                        <div class="story-card-inner">
+                            <div class="story-image-section">
+                                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&q=80" alt="Erik" class="story-image" loading="lazy">
+                                <div class="story-image-overlay"></div>
+                                <div class="story-quote-mark">&ldquo;</div>
+                            </div>
+                            <div class="story-content">
+                                <div class="story-profile">
+                                    <div class="story-avatar">E</div>
+                                    <div>
+                                        <strong class="story-name">Erik, 42</strong>
+                                        <span class="story-location">Oslo</span>
+                                    </div>
+                                </div>
+                                <blockquote class="story-quote">
+                                    Som triatlonist har kroppen min tatt mye juling. TB-500 har revolusjonert restitusjonstiden min. 
+                                    Jeg trener hardere, restituerer raskere, og føler meg 10 år yngre. Lagkameratene mine lurer på hva jeg gjør.
+                                </blockquote>
+                                <div class="story-product">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg>
+                                    <span>Bruker: TB-500</span>
+                                </div>
+                                <div class="story-result">
+                                    <span class="story-result-label">Resultat</span>
+                                    <span class="story-result-text">50% raskere restitusjon</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Story 3: Ingrid -->
+                    <div class="story-card">
+                        <div class="story-card-inner">
+                            <div class="story-image-section">
+                                <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=600&q=80" alt="Ingrid" class="story-image" loading="lazy">
+                                <div class="story-image-overlay"></div>
+                                <div class="story-quote-mark">&ldquo;</div>
+                            </div>
+                            <div class="story-content">
+                                <div class="story-profile">
+                                    <div class="story-avatar">I</div>
+                                    <div>
+                                        <strong class="story-name">Ingrid, 38</strong>
+                                        <span class="story-location">Tromsø</span>
+                                    </div>
+                                </div>
+                                <blockquote class="story-quote">
+                                    Hudforandringene mine etter GHK-Cu har vært utrolige. Kollegaer spør om jeg har gjort noe med huden. 
+                                    Nei — bare kvalitetspeptider og god søvn. Det er den enkleste «anti-aging»-rutinen som finnes.
+                                </blockquote>
+                                <div class="story-product">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg>
+                                    <span>Bruker: GHK-Cu</span>
+                                </div>
+                                <div class="story-result">
+                                    <span class="story-result-label">Resultat</span>
+                                    <span class="story-result-text">Synlig hudfornyelse på 4 uker</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Story 4: Anders -->
+                    <div class="story-card">
+                        <div class="story-card-inner">
+                            <div class="story-image-section">
+                                <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=600&q=80" alt="Anders" class="story-image" loading="lazy">
+                                <div class="story-image-overlay"></div>
+                                <div class="story-quote-mark">&ldquo;</div>
+                            </div>
+                            <div class="story-content">
+                                <div class="story-profile">
+                                    <div class="story-avatar">A</div>
+                                    <div>
+                                        <strong class="story-name">Anders, 55</strong>
+                                        <span class="story-location">Stavanger</span>
+                                    </div>
+                                </div>
+                                <blockquote class="story-quote">
+                                    Søvnkvaliteten min har aldri vært bedre. Ipamorelin har gitt meg dype, restituerende netter 
+                                    som jeg ikke har hatt siden 30-årene. Kona sier jeg endelig har sluttet å snorke også!
+                                </blockquote>
+                                <div class="story-product">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg>
+                                    <span>Bruker: Ipamorelin</span>
+                                </div>
+                                <div class="story-result">
+                                    <span class="story-result-label">Resultat</span>
+                                    <span class="story-result-text">Bedre søvnkvalitet på 2 uker</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="stories-nav">
+                    <button class="stories-nav-btn stories-prev" aria-label="Forrige">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+                    </button>
+                    <div class="stories-dots" id="storiesDots"></div>
+                    <button class="stories-nav-btn stories-next" aria-label="Neste">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-card animate-on-scroll">
+                <div class="cta-bg-pattern"></div>
+                <div class="cta-content">
+                    <h2>Klar til å oppleve forskjellen?</h2>
+                    <p>Bli med over 12 500 nordmenn som allerede stoler på NordicPeps. Laboratorietestet. Legeanbefalt. Alltid verifiserbart.</p>
+                    <div class="cta-actions">
+                        <a href="#produkter" class="btn btn-primary btn-lg btn-white">
+                            <span>Se Produkter</span>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                        </a>
+                        <a href="#kontakt" class="btn btn-ghost btn-lg btn-white-ghost">Snakk med Oss</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section class="blog-section" id="blogg">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-label">Kunnskapsbasen</span>
+                <h2 class="section-title">Lær Mer om Peptider</h2>
+                <p class="section-desc">Evidensbaserte artikler skrevet i samarbeid med norske leger og forskere. Enkelt forklart — uten medisinsk sjargong.</p>
+            </div>
+
+            <div class="blog-grid">
+                <article class="blog-card blog-card-featured animate-on-scroll">
+                    <div class="blog-card-image-wrap">
+                        <img src="https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?w=800&q=80" alt="Hva er peptider" class="blog-card-image" loading="lazy">
+                        <div class="blog-card-category">Guide</div>
+                    </div>
+                    <div class="blog-card-content">
+                        <div class="blog-card-meta">
+                            <span>12. mars 2026</span>
+                            <span>8 min lesing</span>
+                        </div>
+                        <h3 class="blog-card-title">Hva Er Peptider? En Komplett Nybegynnerguide</h3>
+                        <p class="blog-card-excerpt">Alt du trenger å vite om peptider — fra grunnleggende kjemi til praktisk bruk. Skrevet for deg som er nysgjerrig, men ikke har medisinsk bakgrunn.</p>
+                        <a href="#" class="blog-card-link">
+                            <span>Les Artikkelen</span>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                        </a>
+                    </div>
+                </article>
+
+                <article class="blog-card animate-on-scroll">
+                    <div class="blog-card-image-wrap">
+                        <img src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=600&q=80" alt="BPC-157 forskning" class="blog-card-image" loading="lazy">
+                        <div class="blog-card-category">Forskning</div>
+                    </div>
+                    <div class="blog-card-content">
+                        <div class="blog-card-meta">
+                            <span>8. mars 2026</span>
+                            <span>6 min lesing</span>
+                        </div>
+                        <h3 class="blog-card-title">BPC-157: Hva Sier Forskningen?</h3>
+                        <p class="blog-card-excerpt">En gjennomgang av den nyeste forskningen på BPC-157 og hvordan dette peptidet støtter kroppens naturlige reparasjonsprosesser.</p>
+                        <a href="#" class="blog-card-link">
+                            <span>Les Artikkelen</span>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                        </a>
+                    </div>
+                </article>
+
+                <article class="blog-card animate-on-scroll">
+                    <div class="blog-card-image-wrap">
+                        <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=600&q=80" alt="Trygg bruk" class="blog-card-image" loading="lazy">
+                        <div class="blog-card-category">Sikkerhet</div>
+                    </div>
+                    <div class="blog-card-content">
+                        <div class="blog-card-meta">
+                            <span>3. mars 2026</span>
+                            <span>5 min lesing</span>
+                        </div>
+                        <h3 class="blog-card-title">Slik Velger Du Trygge Peptider</h3>
+                        <p class="blog-card-excerpt">Ikke alle peptider er like. Lær hva du bør se etter — fra laboratoriesertifikater til riktig oppbevaring og håndtering.</p>
+                        <a href="#" class="blog-card-link">
+                            <span>Les Artikkelen</span>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                        </a>
+                    </div>
+                </article>
+
+                <article class="blog-card animate-on-scroll">
+                    <div class="blog-card-image-wrap">
+                        <img src="https://images.unsplash.com/photo-1505751172876-fa1923c5c528?w=600&q=80" alt="Anti-aging" class="blog-card-image" loading="lazy">
+                        <div class="blog-card-category">Anti-Aging</div>
+                    </div>
+                    <div class="blog-card-content">
+                        <div class="blog-card-meta">
+                            <span>25. feb 2026</span>
+                            <span>7 min lesing</span>
+                        </div>
+                        <h3 class="blog-card-title">Peptider og Aldring: Hva Vitenskapen Viser</h3>
+                        <p class="blog-card-excerpt">Fra GHK-Cu til Epithalon — en dypere titt på hvordan peptider kan støtte sunn aldring på cellenivå.</p>
+                        <a href="#" class="blog-card-link">
+                            <span>Les Artikkelen</span>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                        </a>
+                    </div>
+                </article>
+            </div>
+
+            <div class="blog-cta animate-on-scroll">
+                <a href="#" class="btn btn-secondary">
+                    <span>Se Alle Artikler</span>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section" id="faq">
+        <div class="container">
+            <div class="faq-layout">
+                <div class="faq-sidebar animate-on-scroll">
+                    <span class="section-label">Vanlige Spørsmål</span>
+                    <h2 class="section-title">Har du<br><em>spørsmål?</em></h2>
+                    <p>Vi har samlet de vanligste spørsmålene vi får. Finner du ikke svaret her? Kontakt oss direkte.</p>
+                    <a href="#kontakt" class="btn btn-secondary">Kontakt Oss</a>
+                </div>
+                <div class="faq-list">
+                    <div class="faq-item animate-on-scroll">
+                        <button class="faq-question">
+                            <span>Hva er peptider, egentlig?</span>
+                            <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Peptider er korte kjeder av aminosyrer — byggesteinene i proteiner. Kroppen din produserer dem naturlig, og de spiller viktige roller i alt fra cellreparasjon til immunforsvar. Våre peptider er syntetiske versjoner som er identiske med de kroppen din allerede lager.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item animate-on-scroll">
+                        <button class="faq-question">
+                            <span>Hvordan vet jeg at peptidene er ekte og trygge?</span>
+                            <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Hvert produkt leveres med en unik QR-kode som du kan skanne for å se fullstendige labresultater fra uavhengig tredjepartslaboratorium i Norge. Du kan se renhetsgrad, batch-nummer, testdato og laboratorienavn — full transparens.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item animate-on-scroll">
+                        <button class="faq-question">
+                            <span>Er det trygt å bruke peptider?</span>
+                            <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Peptidene våre er laboratorietestede og brukes av tusenvis av mennesker i Norge. Vi anbefaler alltid å konsultere med en lege før oppstart, spesielt om du bruker andre medisiner. Mange av legene som anbefaler oss kan gi veiledning om riktig bruk.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item animate-on-scroll">
+                        <button class="faq-question">
+                            <span>Hvordan oppbevarer jeg peptider riktig?</span>
+                            <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Uåpnede peptider oppbevares i kjøleskap (2-8°C). Etter rekonstitusjon bør de brukes innen 30 dager og oppbevares kaldt. Aldri frys rekonstituerte peptider. Detaljerte oppbevaringsinstruksjoner følger med hvert produkt.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item animate-on-scroll">
+                        <button class="faq-question">
+                            <span>Hvor lang tid tar levering?</span>
+                            <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Vi tilbyr diskret levering i hele Norden. Normalt 2-4 virkedager til Norge, 3-5 virkedager til Sverige og Danmark. Alle pakker sendes i nøytral emballasje med temperaturkontrollert frakt.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact / Newsletter Section -->
+    <section class="contact-section" id="kontakt">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info animate-on-scroll">
+                    <span class="section-label">Kontakt</span>
+                    <h2 class="section-title">La oss høre<br><em>fra deg.</em></h2>
+                    <p>Har du spørsmål om produkter, dosering eller bestilling? Vårt team — inkludert medisinsk rådgiver — er klare til å hjelpe.</p>
+                    <div class="contact-methods">
+                        <a href="mailto:hei@nordicpeps.no" class="contact-method">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <rect x="2" y="4" width="20" height="16" rx="2"/>
+                                <path d="M22 4L12 13 2 4"/>
+                            </svg>
+                            <span>hei@nordicpeps.no</span>
+                        </a>
+                        <a href="#" class="contact-method">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/>
+                            </svg>
+                            <span>Live Chat (09-17)</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="contact-form-wrap animate-on-scroll">
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Navn</label>
+                            <input type="text" id="name" name="name" placeholder="Ditt fulle navn" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">E-post</label>
+                            <input type="email" id="email" name="email" placeholder="din@epost.no" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Emne</label>
+                            <select id="subject" name="subject">
+                                <option value="">Velg emne</option>
+                                <option value="produkt">Spørsmål om produkt</option>
+                                <option value="bestilling">Bestilling / Levering</option>
+                                <option value="medisinsk">Medisinsk rådgivning</option>
+                                <option value="samarbeid">Samarbeid / B2B</option>
+                                <option value="annet">Annet</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Melding</label>
+                            <textarea id="message" name="message" placeholder="Fortell oss hva vi kan hjelpe med..." rows="4" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-lg btn-full">
+                            <span>Send Melding</span>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#" class="footer-logo">
+                        <svg class="nav-logo-icon" viewBox="0 0 40 40" fill="none">
+                            <path d="M20 4L35 12.5V27.5L20 36L5 27.5V12.5L20 4Z" stroke="currentColor" stroke-width="1.5"/>
+                            <path d="M20 10L29 15.5V24.5L20 30L11 24.5V15.5L20 10Z" stroke="currentColor" stroke-width="0.8" opacity="0.4"/>
+                        </svg>
+                        <span>NordicPeps</span>
+                    </a>
+                    <p class="footer-tagline">Gode varer. Trygge varer.<br>Laboratorietestet i Norge.</p>
+                    <div class="footer-certifications">
+                        <div class="footer-cert">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                            <span>ISO 17025</span>
+                        </div>
+                        <div class="footer-cert">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg>
+                            <span>GMP Certified</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-links-group">
+                    <h4>Produkter</h4>
+                    <a href="#">BPC-157</a>
+                    <a href="#">TB-500</a>
+                    <a href="#">GHK-Cu</a>
+                    <a href="#">CJC-1295</a>
+                    <a href="#">Ipamorelin</a>
+                    <a href="#">Epithalon</a>
+                </div>
+                <div class="footer-links-group">
+                    <h4>Ressurser</h4>
+                    <a href="#">Blogg</a>
+                    <a href="#">Nybegynnerguide</a>
+                    <a href="#">Forskning</a>
+                    <a href="#">FAQ</a>
+                    <a href="#">Verifiser Produkt</a>
+                </div>
+                <div class="footer-links-group">
+                    <h4>Selskap</h4>
+                    <a href="#">Om Oss</a>
+                    <a href="#">Kontakt</a>
+                    <a href="#">Personvern</a>
+                    <a href="#">Vilkår</a>
+                    <a href="#">For Leger</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 NordicPeps. Alle rettigheter reservert.</p>
+                <p class="footer-disclaimer">NordicPeps-produkter er kun til forskningsformål. Konsulter alltid en kvalifisert helsepersonell før bruk.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating CTA -->
+    <div class="floating-cta" id="floatingCta">
+        <a href="#produkter" class="floating-cta-btn">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4zM3 6h18M16 10a4 4 0 01-8 0"/></svg>
+            <span>Se Produkter</span>
+        </a>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

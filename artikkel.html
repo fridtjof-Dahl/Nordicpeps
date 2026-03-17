@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hva Er Peptider? En Komplett Nybegynnerguide — NordicPeps</title>
+    <meta name="description" content="Alt du trenger å vite om peptider — fra grunnleggende kjemi til praktisk bruk. Skrevet for deg som er nysgjerrig.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="article.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="nav scrolled" id="nav">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo" style="color: var(--color-text)">
+                <svg class="nav-logo-icon" viewBox="0 0 40 40" fill="none">
+                    <path d="M20 4L35 12.5V27.5L20 36L5 27.5V12.5L20 4Z" stroke="currentColor" stroke-width="1.5"/>
+                    <path d="M20 10L29 15.5V24.5L20 30L11 24.5V15.5L20 10Z" stroke="currentColor" stroke-width="0.8" opacity="0.4"/>
+                </svg>
+                <span>NordicPeps</span>
+            </a>
+            <div class="nav-links" id="navLinks">
+                <a href="index.html#produkter" class="nav-link" style="color: var(--color-text-secondary)">Produkter</a>
+                <a href="index.html#vitenskap" class="nav-link" style="color: var(--color-text-secondary)">Vitenskap</a>
+                <a href="index.html#historier" class="nav-link" style="color: var(--color-text-secondary)">Historier</a>
+                <a href="index.html#blogg" class="nav-link" style="color: var(--color-text-secondary)">Blogg</a>
+                <a href="index.html#kontakt" class="nav-link" style="color: var(--color-text-secondary)">Kontakt</a>
+            </div>
+            <div class="nav-actions">
+                <a href="index.html#produkter" class="nav-cta">Utforsk Produkter</a>
+                <button class="nav-menu-btn" id="navMenuBtn" aria-label="Meny">
+                    <span style="background: var(--color-text)"></span>
+                    <span style="background: var(--color-text)"></span>
+                    <span style="background: var(--color-text)"></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-inner">
+            <a href="index.html#produkter" class="mobile-menu-link">Produkter</a>
+            <a href="index.html#vitenskap" class="mobile-menu-link">Vitenskap</a>
+            <a href="index.html#historier" class="mobile-menu-link">Historier</a>
+            <a href="index.html#blogg" class="mobile-menu-link">Blogg</a>
+            <a href="index.html#kontakt" class="mobile-menu-link">Kontakt</a>
+        </div>
+    </div>
+
+    <!-- Article Hero -->
+    <header class="article-hero">
+        <div class="container">
+            <div class="article-breadcrumb">
+                <a href="index.html">Hjem</a>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+                <a href="index.html#blogg">Blogg</a>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+                <span>Guide</span>
+            </div>
+            <div class="article-hero-content">
+                <span class="article-category">Guide</span>
+                <h1 class="article-title">Hva Er Peptider?<br><em>En Komplett Nybegynnerguide</em></h1>
+                <p class="article-excerpt">Alt du trenger å vite om peptider — fra grunnleggende kjemi til praktisk bruk. Skrevet for deg som er nysgjerrig, men ikke har medisinsk bakgrunn.</p>
+                <div class="article-meta-row">
+                    <div class="article-author">
+                        <div class="article-author-avatar">DR</div>
+                        <div>
+                            <strong>Dr. Kristin Haugen</strong>
+                            <span>Medisinsk rådgiver, NordicPeps</span>
+                        </div>
+                    </div>
+                    <div class="article-meta-info">
+                        <span>12. mars 2026</span>
+                        <span>·</span>
+                        <span>8 min lesing</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Article Image -->
+    <div class="article-featured-image">
+        <div class="container">
+            <img src="https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?w=1200&q=80" alt="Peptider vitenskap" loading="lazy">
+        </div>
+    </div>
+
+    <!-- Article Content -->
+    <main class="article-layout">
+        <div class="container">
+            <div class="article-grid">
+                <!-- Sidebar -->
+                <aside class="article-sidebar">
+                    <div class="sidebar-sticky">
+                        <div class="sidebar-toc">
+                            <h4>Innholdsfortegnelse</h4>
+                            <nav>
+                                <a href="#hva-er-peptider" class="toc-link active">Hva er peptider?</a>
+                                <a href="#hvordan-fungerer" class="toc-link">Hvordan fungerer de?</a>
+                                <a href="#typer-peptider" class="toc-link">Typer peptider</a>
+                                <a href="#hvem-bruker" class="toc-link">Hvem bruker peptider?</a>
+                                <a href="#sikkerhet" class="toc-link">Sikkerhet og kvalitet</a>
+                                <a href="#komme-igang" class="toc-link">Komme i gang</a>
+                            </nav>
+                        </div>
+
+                        <div class="sidebar-cta">
+                            <h4>Klar til å utforske?</h4>
+                            <p>Se vårt utvalg av laboratorietestede peptider med QR-verifisering.</p>
+                            <a href="index.html#produkter" class="btn btn-primary btn-full">Se Produkter</a>
+                        </div>
+
+                        <div class="sidebar-share">
+                            <h4>Del artikkelen</h4>
+                            <div class="share-buttons">
+                                <button class="share-btn" title="Kopier lenke">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/>
+                                        <path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/>
+                                    </svg>
+                                </button>
+                                <button class="share-btn" title="Del på Facebook">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/>
+                                    </svg>
+                                </button>
+                                <button class="share-btn" title="Del på Twitter">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"/>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </aside>
+
+                <!-- Main Content -->
+                <article class="article-content">
+                    <div class="article-body">
+                        <p class="article-lead">
+                            Peptider har blitt et av de mest omtalte temaene innen helse og forskning de siste årene. 
+                            Men hva er de egentlig — og hvorfor snakker alle om dem? I denne guiden bryter vi det ned til det helt grunnleggende.
+                        </p>
+
+                        <h2 id="hva-er-peptider">Hva er peptider?</h2>
+                        <p>
+                            Enkelt forklart er peptider korte kjeder av aminosyrer — de samme byggesteinene som danner proteiner. 
+                            Mens proteiner kan bestå av hundrevis eller tusenvis av aminosyrer, inneholder peptider typisk mellom 2 og 50.
+                        </p>
+                        <p>
+                            Kroppen din produserer naturlig tusenvis av forskjellige peptider som fungerer som «signalmolekyler». 
+                            De forteller cellene dine hva de skal gjøre — fra å reparere skadet vev til å regulere immunsystemet.
+                        </p>
+
+                        <div class="article-highlight">
+                            <div class="highlight-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="12" r="10"/>
+                                    <line x1="12" y1="16" x2="12" y2="12"/>
+                                    <line x1="12" y1="8" x2="12.01" y2="8"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <strong>Visste du?</strong>
+                                <p>Insulin — som brukes av millioner av diabetespasienter — er faktisk et peptid. Det var et av de første peptidene som ble syntetisert i et laboratorium, helt tilbake i 1921.</p>
+                            </div>
+                        </div>
+
+                        <h2 id="hvordan-fungerer">Hvordan fungerer peptider?</h2>
+                        <p>
+                            Peptider fungerer ved å binde seg til spesifikke reseptorer på celleoverflaten. Tenk på det som en nøkkel 
+                            som passer i en bestemt lås. Når peptidet «låser opp» reseptoren, sender det et signal til cellen om å utføre en bestemt handling.
+                        </p>
+                        <p>
+                            Forskjellige peptider har forskjellige nøkler — og dermed forskjellige effekter. Noen stimulerer cellereparasjon, 
+                            andre påvirker hormonnivåer, og noen støtter immunsystemet.
+                        </p>
+
+                        <figure class="article-figure">
+                            <img src="https://images.unsplash.com/photo-1579154204601-01588f351e67?w=900&q=80" alt="Laboratorietesting" loading="lazy">
+                            <figcaption>Alle NordicPeps-produkter gjennomgår streng laboratorietesting før de når deg.</figcaption>
+                        </figure>
+
+                        <h2 id="typer-peptider">Vanlige typer peptider</h2>
+                        <p>Her er noen av de mest studerte peptidene og hva de brukes til:</p>
+
+                        <div class="article-peptide-grid">
+                            <div class="peptide-info-card">
+                                <h4>BPC-157</h4>
+                                <span class="peptide-tag">Recovery</span>
+                                <p>Body Protection Compound. Støtter helbredelse av muskler, sener og ledd. Et av de mest forskede recovery-peptidene.</p>
+                            </div>
+                            <div class="peptide-info-card">
+                                <h4>TB-500</h4>
+                                <span class="peptide-tag">Recovery</span>
+                                <p>Thymosin Beta-4. Fremmer cellemigrasjon og vevsgjenoppbygging. Ofte brukt i kombinasjon med BPC-157.</p>
+                            </div>
+                            <div class="peptide-info-card">
+                                <h4>GHK-Cu</h4>
+                                <span class="peptide-tag">Anti-Aging</span>
+                                <p>Kobber-peptid. Stimulerer kollagenproduksjon, støtter hudfornyelse og har antioksidante egenskaper.</p>
+                            </div>
+                            <div class="peptide-info-card">
+                                <h4>Epithalon</h4>
+                                <span class="peptide-tag">Wellness</span>
+                                <p>Telomerase-aktivator. Forskning antyder at det kan støtte cellulær aldring og immunfunksjon.</p>
+                            </div>
+                        </div>
+
+                        <h2 id="hvem-bruker">Hvem bruker peptider?</h2>
+                        <p>
+                            Peptider brukes av et bredt spekter av mennesker — fra toppidrettsutøvere som ønsker raskere restitusjon, 
+                            til eldre som vil støtte kroppens naturlige reparasjonsprosesser.
+                        </p>
+                        <ul>
+                            <li><strong>Idrettsutøvere:</strong> For raskere restitusjon og muskelreparasjon</li>
+                            <li><strong>Eldre:</strong> For å støtte leddelse og mobilitet</li>
+                            <li><strong>Hudpleie-entusiaster:</strong> For anti-aging og kollagenstøtte</li>
+                            <li><strong>Biohackere:</strong> For optimalisering av søvn og hormonbalanse</li>
+                            <li><strong>Pasienter:</strong> Under veiledning av lege for spesifikke tilstander</li>
+                        </ul>
+
+                        <div class="article-quote">
+                            <blockquote>
+                                «Peptider representerer en ny grense innen personlig helse. Det viktigste er å velge 
+                                kvalitetsprodukter fra pålitelige leverandører med dokumentert testing.»
+                            </blockquote>
+                            <div class="article-quote-author">
+                                <strong>Dr. Kristin Haugen</strong>
+                                <span>Medisinsk rådgiver, NordicPeps</span>
+                            </div>
+                        </div>
+
+                        <h2 id="sikkerhet">Sikkerhet og kvalitet</h2>
+                        <p>
+                            Ikke alle peptider på markedet er like. Kvaliteten varierer enormt mellom leverandører, 
+                            og det er avgjørende å velge produkter som er:
+                        </p>
+                        <ol>
+                            <li><strong>Laboratorietestet</strong> — av uavhengig tredjepartslaboratorium</li>
+                            <li><strong>Sertifisert for renhet</strong> — minimum 99% renhet via HPLC-analyse</li>
+                            <li><strong>Sporbar</strong> — med Certificate of Analysis for hver batch</li>
+                            <li><strong>Riktig oppbevart</strong> — kjølekjede fra produksjon til levering</li>
+                        </ol>
+                        <p>
+                            Hos NordicPeps er alle produkter verifiserbare via QR-kode. Skann koden med telefonen din 
+                            for å se fullstendige labresultater i sanntid.
+                        </p>
+
+                        <h2 id="komme-igang">Hvordan komme i gang</h2>
+                        <p>
+                            Hvis du vurderer å prøve peptider, anbefaler vi følgende steg:
+                        </p>
+                        <ol>
+                            <li><strong>Snakk med legen din</strong> — spesielt om du bruker andre medisiner</li>
+                            <li><strong>Start med ett peptid</strong> — slik at du kan vurdere effekten</li>
+                            <li><strong>Velg kvalitet</strong> — se etter laboratorietestet med sporbarhet</li>
+                            <li><strong>Følg doseringsveiledningen</strong> — mer er ikke alltid bedre</li>
+                            <li><strong>Vær tålmodig</strong> — de fleste peptider trenger 4-8 uker for synlige resultater</li>
+                        </ol>
+
+                        <div class="article-cta-inline">
+                            <div class="article-cta-content">
+                                <h3>Klar til å utforske peptider?</h3>
+                                <p>Se vårt utvalg av laboratorietestede peptider — alle med QR-verifisering og Certificate of Analysis.</p>
+                                <a href="index.html#produkter" class="btn btn-primary btn-lg">
+                                    <span>Se Våre Produkter</span>
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Related Articles -->
+                    <div class="related-articles">
+                        <h3>Relaterte Artikler</h3>
+                        <div class="related-grid">
+                            <a href="#" class="related-card">
+                                <img src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=400&q=80" alt="BPC-157" loading="lazy">
+                                <div class="related-card-content">
+                                    <span class="related-category">Forskning</span>
+                                    <h4>BPC-157: Hva Sier Forskningen?</h4>
+                                    <span class="related-meta">6 min lesing</span>
+                                </div>
+                            </a>
+                            <a href="#" class="related-card">
+                                <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=400&q=80" alt="Trygge peptider" loading="lazy">
+                                <div class="related-card-content">
+                                    <span class="related-category">Sikkerhet</span>
+                                    <h4>Slik Velger Du Trygge Peptider</h4>
+                                    <span class="related-meta">5 min lesing</span>
+                                </div>
+                            </a>
+                            <a href="#" class="related-card">
+                                <img src="https://images.unsplash.com/photo-1505751172876-fa1923c5c528?w=400&q=80" alt="Anti-aging" loading="lazy">
+                                <div class="related-card-content">
+                                    <span class="related-category">Anti-Aging</span>
+                                    <h4>Peptider og Aldring: Hva Vitenskapen Viser</h4>
+                                    <span class="related-meta">7 min lesing</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer (same as main page) -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="footer-logo">
+                        <svg class="nav-logo-icon" viewBox="0 0 40 40" fill="none">
+                            <path d="M20 4L35 12.5V27.5L20 36L5 27.5V12.5L20 4Z" stroke="currentColor" stroke-width="1.5"/>
+                            <path d="M20 10L29 15.5V24.5L20 30L11 24.5V15.5L20 10Z" stroke="currentColor" stroke-width="0.8" opacity="0.4"/>
+                        </svg>
+                        <span>NordicPeps</span>
+                    </a>
+                    <p class="footer-tagline">Gode varer. Trygge varer.<br>Laboratorietestet i Norge.</p>
+                </div>
+                <div class="footer-links-group">
+                    <h4>Produkter</h4>
+                    <a href="#">BPC-157</a>
+                    <a href="#">TB-500</a>
+                    <a href="#">GHK-Cu</a>
+                    <a href="#">CJC-1295</a>
+                </div>
+                <div class="footer-links-group">
+                    <h4>Ressurser</h4>
+                    <a href="#">Blogg</a>
+                    <a href="#">FAQ</a>
+                    <a href="#">Forskning</a>
+                </div>
+                <div class="footer-links-group">
+                    <h4>Selskap</h4>
+                    <a href="#">Om Oss</a>
+                    <a href="#">Kontakt</a>
+                    <a href="#">Personvern</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 NordicPeps. Alle rettigheter reservert.</p>
+                <p class="footer-disclaimer">NordicPeps-produkter er kun til forskningsformål. Konsulter alltid en kvalifisert helsepersonell før bruk.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Table of contents active state on scroll
+        const tocLinks = document.querySelectorAll('.toc-link');
+        const sections = [];
+        tocLinks.forEach(link => {
+            const id = link.getAttribute('href').slice(1);
+            const section = document.getElementById(id);
+            if (section) sections.push({ el: section, link });
+        });
+
+        window.addEventListener('scroll', () => {
+            const scrollPos = window.scrollY + 120;
+            let current = sections[0];
+            sections.forEach(s => {
+                if (s.el.offsetTop <= scrollPos) current = s;
+            });
+            tocLinks.forEach(l => l.classList.remove('active'));
+            if (current) current.link.classList.add('active');
+        });
+
+        // Reading progress bar
+        const progressBar = document.createElement('div');
+        progressBar.className = 'reading-progress';
+        document.body.prepend(progressBar);
+
+        window.addEventListener('scroll', () => {
+            const article = document.querySelector('.article-body');
+            if (!article) return;
+            const rect = article.getBoundingClientRect();
+            const total = article.scrollHeight - window.innerHeight;
+            const scrolled = -rect.top;
+            const progress = Math.max(0, Math.min(1, scrolled / total));
+            progressBar.style.transform = `scaleX(${progress})`;
+        });
+    </script>
+</body>
+</html>
